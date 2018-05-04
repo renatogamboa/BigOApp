@@ -1,19 +1,15 @@
 //
-//  ViewController.swift
+//  DataStructures.swift
 //  BigOApp
 //
-//  Created by Martin Gamboa on 4/20/18.
+//  Created by Martin Gamboa on 5/4/18.
 //  Copyright © 2018 RenatoGamboa. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    
-    
-    
-    
+class DataStructures: UIViewController {
+
     @IBOutlet weak var menuOutlet: UIButton!
     @IBOutlet var selections: [UIButton]!
     
@@ -22,8 +18,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,7 +27,7 @@ class ViewController: UIViewController {
         selections.forEach { (button) in
             UIView.animate(withDuration: 0.3, animations: {
                 
-               button.isHidden = !button.isHidden
+                button.isHidden = !button.isHidden
                 self.view.layoutIfNeeded()
             })
         }
@@ -59,21 +53,22 @@ class ViewController: UIViewController {
         }
         
         /*
-        guard let title = sender.currentTitle, let category = Categories(rawValue: title) else{
-            return
-        }
-        
-        switch category {
-        case .home:
-            
-            print("Home")
-        default:
-            print("Category")
-        }
-    
- */
+         guard let title = sender.currentTitle, let category = Categories(rawValue: title) else{
+         return
+         }
+         
+         switch category {
+         case .home:
+         
+         print("Home")
+         default:
+         print("Category")
+         }
+         
+         */
     }
     
-
+    
 }
+
 

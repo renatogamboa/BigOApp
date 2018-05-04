@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ya3-s8-Xkt">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ya3-s8-Xkt">
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yh-Q0-RIf">
@@ -28,7 +28,7 @@
                                             <constraint firstAttribute="height" constant="50" id="sYH-fY-l5N"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <state key="normal" title="Navigation">
+                                        <state key="normal" title="Menu">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -59,6 +59,7 @@
                                         </state>
                                         <connections>
                                             <action selector="selectionTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9S1-J6-Zsc"/>
+                                            <segue destination="Enj-R7-0UV" kind="presentation" modalTransitionStyle="crossDissolve" id="eZv-8h-WvX"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNd-it-6A6">
@@ -102,7 +103,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="ya3-s8-Xkt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Js6-Er-V57"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ya3-s8-Xkt" secondAttribute="trailing" id="Vb8-si-9fK"/>
@@ -111,6 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="menuOutlet" destination="7yh-Q0-RIf" id="csy-ep-myB"/>
                         <outletCollection property="selections" destination="7fS-i1-LzP" collectionClass="NSMutableArray" id="gvH-2r-7aU"/>
                         <outletCollection property="selections" destination="X5V-1Y-fbm" collectionClass="NSMutableArray" id="yyD-29-SYX"/>
                         <outletCollection property="selections" destination="VNd-it-6A6" collectionClass="NSMutableArray" id="Uja-rC-sgm"/>
@@ -119,6 +121,142 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Page View Controller1-->
+        <scene sceneID="Iky-z7-pbe">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="mKj-Ae-TSL" customClass="UIPageViewController1" customModule="BigOApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anl-r6-RpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="1254"/>
+        </scene>
+        <!--Data Structures-->
+        <scene sceneID="za3-rz-sKR">
+            <objects>
+                <viewController storyboardIdentifier="DataStructures" id="Enj-R7-0UV" customClass="DataStructures" customModule="BigOApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lTv-P0-bnE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pZZ-cZ-i4c">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Sp-Ym-Ahe">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kzG-0J-nJ1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <state key="normal" title="Data Structures">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="handleSelection:" destination="Enj-R7-0UV" eventType="touchUpInside" id="Grx-IV-eUq"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mS2-aN-YA6">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="aSU-XP-iXB"/>
+                                        </constraints>
+                                        <state key="normal" title="Home">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectionTapped:" destination="Enj-R7-0UV" eventType="touchUpInside" id="eld-j8-q1x"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="zyd-it-0KO"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k5-BX-jYz">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AKW-kn-URk"/>
+                                        </constraints>
+                                        <state key="normal" title="Data Structures">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectionTapped:" destination="Enj-R7-0UV" eventType="touchUpInside" id="ZQn-8W-ZSS"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhg-QQ-giV">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="O34-TQ-1st"/>
+                                        </constraints>
+                                        <state key="normal" title="Sorting">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectionTapped:" destination="Enj-R7-0UV" eventType="touchUpInside" id="xuK-9s-0mk"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4de-ob-53w">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gtM-FV-7Hl"/>
+                                        </constraints>
+                                        <state key="normal" title="Pseudocode">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectionTapped:" destination="Enj-R7-0UV" eventType="touchUpInside" id="DIC-KS-mSv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="mS2-aN-YA6" secondAttribute="trailing" id="AJT-Zy-2O1"/>
+                                    <constraint firstItem="9k5-BX-jYz" firstAttribute="leading" secondItem="pZZ-cZ-i4c" secondAttribute="leading" id="AgJ-ht-iyf"/>
+                                    <constraint firstItem="0Sp-Ym-Ahe" firstAttribute="leading" secondItem="pZZ-cZ-i4c" secondAttribute="leading" id="Dk3-v9-ev5"/>
+                                    <constraint firstItem="Zhg-QQ-giV" firstAttribute="leading" secondItem="pZZ-cZ-i4c" secondAttribute="leading" id="RBK-8f-l51"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Sp-Ym-Ahe" secondAttribute="trailing" id="Uo1-5q-0Hn"/>
+                                    <constraint firstAttribute="trailing" secondItem="4de-ob-53w" secondAttribute="trailing" id="Wb5-sN-xEp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zhg-QQ-giV" secondAttribute="trailing" id="ec0-r2-Wc4"/>
+                                    <constraint firstItem="4de-ob-53w" firstAttribute="leading" secondItem="pZZ-cZ-i4c" secondAttribute="leading" id="hfy-Ow-98q"/>
+                                    <constraint firstItem="mS2-aN-YA6" firstAttribute="leading" secondItem="pZZ-cZ-i4c" secondAttribute="leading" id="phf-oE-Ub6"/>
+                                    <constraint firstAttribute="trailing" secondItem="9k5-BX-jYz" secondAttribute="trailing" id="sJs-Wg-VTk"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.64705882349999999" green="1" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pZZ-cZ-i4c" firstAttribute="top" secondItem="28d-UV-kbu" secondAttribute="top" id="DHs-Z6-ylC"/>
+                            <constraint firstItem="pZZ-cZ-i4c" firstAttribute="leading" secondItem="28d-UV-kbu" secondAttribute="leading" id="iOq-Qf-0Qk"/>
+                            <constraint firstItem="28d-UV-kbu" firstAttribute="trailing" secondItem="pZZ-cZ-i4c" secondAttribute="trailing" id="yYX-wp-L5i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="28d-UV-kbu"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuOutlet" destination="0Sp-Ym-Ahe" id="bV1-Ej-RgE"/>
+                        <outletCollection property="selections" destination="mS2-aN-YA6" collectionClass="NSMutableArray" id="FKD-vb-HcO"/>
+                        <outletCollection property="selections" destination="9k5-BX-jYz" collectionClass="NSMutableArray" id="cDH-hV-Q3K"/>
+                        <outletCollection property="selections" destination="Zhg-QQ-giV" collectionClass="NSMutableArray" id="Up2-pA-lBs"/>
+                        <outletCollection property="selections" destination="4de-ob-53w" collectionClass="NSMutableArray" id="ibi-F9-I4W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iHu-Ff-yM1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="1254"/>
+        </scene>
+        <!--Data2-->
+        <scene sceneID="goX-19-fbB">
+            <objects>
+                <viewController storyboardIdentifier="Data2" id="K5U-7D-bmj" customClass="Data2" customModule="BigOApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A32-iX-OLm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.36501032109999998" green="0.27854308490000002" blue="0.63632905480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="kOv-UH-CYw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K96-ox-sO4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1134" y="1254"/>
         </scene>
     </scenes>
 </document>

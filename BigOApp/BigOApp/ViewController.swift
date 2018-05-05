@@ -17,6 +17,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var videoView: UIView!
     
+    @IBOutlet weak var BlurView: UIView!
+    @IBOutlet weak var BlurrEffect: UIVisualEffectView!
+    
+    
+    //Blurr affect
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +50,9 @@ class ViewController: UIViewController {
         selections.forEach { (button) in
             UIView.animate(withDuration: 0.6, animations: {
                 
+                //BLUR VIEW
+                self.BlurrEffect.isHidden = !self.BlurrEffect.isHidden
+                self.BlurrEffect.alpha = 1
                button.isHidden = !button.isHidden
                 button.alpha = 1
                 self.view.layoutIfNeeded()
@@ -62,8 +74,16 @@ class ViewController: UIViewController {
         selections.forEach { (button) in
             UIView.animate(withDuration: 0.5, animations: {
                 
+                self.BlurrEffect.alpha = 0
+                self.BlurrEffect.isHidden = !self.BlurrEffect.isHidden
+                
                 button.alpha = 0
                 button.isHidden = !button.isHidden
+                
+                
+                
+                
+          
 
                 
                 
@@ -111,6 +131,6 @@ class ViewController: UIViewController {
     }
     
     
-
+    
 }
 

@@ -19,11 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzf-ns-vP3">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="665"/>
                             </view>
+                            <visualEffectView hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RlP-Vm-S65">
+                                <rect key="frame" x="0.0" y="66" width="375" height="601"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WR5-z6-RzO">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="601"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yh-Q0-RIf">
                                 <rect key="frame" x="0.0" y="16" width="375" height="50"/>
-                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="0.2498394691780822" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="0.4003103595890411" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sYH-fY-l5N"/>
                                 </constraints>
@@ -106,7 +114,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vi-8N-XbG" customClass="MyButton" customModule="BigOApp" customModuleProvider="target">
-                                <rect key="frame" x="107" y="472" width="168" height="149"/>
+                                <rect key="frame" x="107" y="490" width="168" height="149"/>
                                 <color key="backgroundColor" red="0.97680455446243286" green="0.24945486145650009" blue="0.064091009650266637" alpha="0.84543557363013699" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="KQo-mA-Ava"/>
@@ -141,8 +149,10 @@
                         <constraints>
                             <constraint firstItem="VNd-it-6A6" firstAttribute="top" secondItem="X5V-1Y-fbm" secondAttribute="bottom" constant="48" id="02y-8i-FFL"/>
                             <constraint firstItem="X5V-1Y-fbm" firstAttribute="centerX" secondItem="VNd-it-6A6" secondAttribute="centerX" id="3wo-CV-Udc"/>
+                            <constraint firstItem="RlP-Vm-S65" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4qp-sr-1b3"/>
                             <constraint firstItem="7yh-Q0-RIf" firstAttribute="leading" secondItem="dzf-ns-vP3" secondAttribute="leading" id="5og-kQ-4nB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dzf-ns-vP3" secondAttribute="trailing" id="7cC-E6-N4N"/>
+                            <constraint firstItem="RlP-Vm-S65" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ABe-zN-lbp"/>
                             <constraint firstItem="dzf-ns-vP3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hgh-U8-rqa"/>
                             <constraint firstItem="dzf-ns-vP3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KKT-5l-a4x"/>
                             <constraint firstItem="7yh-Q0-RIf" firstAttribute="centerX" secondItem="dzf-ns-vP3" secondAttribute="centerX" id="MBp-rf-R9t"/>
@@ -150,15 +160,19 @@
                             <constraint firstItem="1vi-8N-XbG" firstAttribute="centerX" secondItem="7yh-Q0-RIf" secondAttribute="centerX" constant="4" id="Qda-Zk-gK1"/>
                             <constraint firstItem="VNd-it-6A6" firstAttribute="leading" secondItem="X5V-1Y-fbm" secondAttribute="leading" id="VB6-Yp-Bys"/>
                             <constraint firstItem="1vi-8N-XbG" firstAttribute="top" secondItem="dzf-ns-vP3" secondAttribute="bottom" constant="-195" id="WiG-fC-KCI"/>
+                            <constraint firstItem="RlP-Vm-S65" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wl2-0Y-8mY"/>
                             <constraint firstItem="7yh-Q0-RIf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n9b-kj-pf0"/>
                             <constraint firstItem="dzf-ns-vP3" firstAttribute="top" secondItem="X5V-1Y-fbm" secondAttribute="bottom" constant="-225" id="nvd-MZ-9wQ"/>
-                            <constraint firstItem="1vi-8N-XbG" firstAttribute="top" secondItem="VNd-it-6A6" secondAttribute="bottom" constant="30" id="tRg-bW-LxJ"/>
+                            <constraint firstItem="RlP-Vm-S65" firstAttribute="top" secondItem="7yh-Q0-RIf" secondAttribute="bottom" id="spg-R7-fna"/>
+                            <constraint firstItem="1vi-8N-XbG" firstAttribute="top" secondItem="VNd-it-6A6" secondAttribute="bottom" constant="48" id="tRg-bW-LxJ"/>
                             <constraint firstItem="X5V-1Y-fbm" firstAttribute="top" secondItem="7yh-Q0-RIf" secondAttribute="bottom" constant="30" id="uCS-Ig-Kma"/>
                             <constraint firstItem="7yh-Q0-RIf" firstAttribute="trailing" secondItem="dzf-ns-vP3" secondAttribute="trailing" id="wlr-dz-xra"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="BlurView" destination="WR5-z6-RzO" id="6fm-Ky-cba"/>
+                        <outlet property="BlurrEffect" destination="RlP-Vm-S65" id="0gL-t7-hYf"/>
                         <outlet property="menuOutlet" destination="7yh-Q0-RIf" id="csy-ep-myB"/>
                         <outlet property="videoView" destination="dzf-ns-vP3" id="GXT-PM-GWo"/>
                         <outletCollection property="selections" destination="X5V-1Y-fbm" collectionClass="NSMutableArray" id="yyD-29-SYX"/>

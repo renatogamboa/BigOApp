@@ -15,6 +15,9 @@
 		1DA54DEE209CE4CE0053C4AC /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA54DED209CE4CE0053C4AC /* DataStructures.swift */; };
 		1DA54DF0209CEBDB0053C4AC /* UIPageViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA54DEF209CEBDB0053C4AC /* UIPageViewController1.swift */; };
 		1DA54DF2209CF4C90053C4AC /* Data2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA54DF1209CF4C90053C4AC /* Data2.swift */; };
+		1DA54DF4209D14820053C4AC /* Data3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA54DF3209D14820053C4AC /* Data3.swift */; };
+		1DA54DF6209D1A340053C4AC /* MyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA54DF5209D1A340053C4AC /* MyButton.swift */; };
+		1DA54DFE209D660D0053C4AC /* SpaceBackground1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1DA54DFD209D660D0053C4AC /* SpaceBackground1.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		1DA54DED209CE4CE0053C4AC /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		1DA54DEF209CEBDB0053C4AC /* UIPageViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPageViewController1.swift; sourceTree = "<group>"; };
 		1DA54DF1209CF4C90053C4AC /* Data2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data2.swift; sourceTree = "<group>"; };
+		1DA54DF3209D14820053C4AC /* Data3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data3.swift; sourceTree = "<group>"; };
+		1DA54DF5209D1A340053C4AC /* MyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyButton.swift; sourceTree = "<group>"; };
+		1DA54DFD209D660D0053C4AC /* SpaceBackground1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = SpaceBackground1.mp4; path = "../../../Music/iTunes/iTunes Media/Home Videos/SpaceBackground1.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,10 @@
 				1DA54DED209CE4CE0053C4AC /* DataStructures.swift */,
 				1DA54DEF209CEBDB0053C4AC /* UIPageViewController1.swift */,
 				1DA54DF1209CF4C90053C4AC /* Data2.swift */,
+				1DA54DF3209D14820053C4AC /* Data3.swift */,
 				1D11BC4B208A86450009B98B /* Main.storyboard */,
+				1DA54DF5209D1A340053C4AC /* MyButton.swift */,
+				1DA54DFD209D660D0053C4AC /* SpaceBackground1.mp4 */,
 				1D11BC4E208A86450009B98B /* Assets.xcassets */,
 				1D11BC50208A86450009B98B /* LaunchScreen.storyboard */,
 				1D11BC53208A86450009B98B /* Info.plist */,
@@ -132,6 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DA54DFE209D660D0053C4AC /* SpaceBackground1.mp4 in Resources */,
 				1D11BC52208A86450009B98B /* LaunchScreen.storyboard in Resources */,
 				1D11BC4F208A86450009B98B /* Assets.xcassets in Resources */,
 				1D11BC4D208A86450009B98B /* Main.storyboard in Resources */,
@@ -146,8 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DA54DEE209CE4CE0053C4AC /* DataStructures.swift in Sources */,
+				1DA54DF6209D1A340053C4AC /* MyButton.swift in Sources */,
 				1DA54DF0209CEBDB0053C4AC /* UIPageViewController1.swift in Sources */,
 				1D11BC4A208A86450009B98B /* ViewController.swift in Sources */,
+				1DA54DF4209D14820053C4AC /* Data3.swift in Sources */,
 				1D11BC48208A86450009B98B /* AppDelegate.swift in Sources */,
 				1DA54DF2209CF4C90053C4AC /* Data2.swift in Sources */,
 			);

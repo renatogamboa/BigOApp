@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
-    
-    
-    
     
     
     @IBOutlet weak var menuOutlet: UIButton!
     @IBOutlet var selections: [UIButton]!
     
+    @IBOutlet weak var videoView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpView()
+        
+        
+        
+        
+       
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -31,9 +39,10 @@ class ViewController: UIViewController {
     
     @IBAction func handleSelection(_ sender: UIButton) {
         selections.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.6, animations: {
                 
                button.isHidden = !button.isHidden
+                button.alpha = 1
                 self.view.layoutIfNeeded()
             })
         }
@@ -51,9 +60,13 @@ class ViewController: UIViewController {
         menuOutlet.titleLabel?.text = sender.titleLabel?.text
         
         selections.forEach { (button) in
-            UIView.animate(withDuration: 0.3, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 
+                button.alpha = 0
                 button.isHidden = !button.isHidden
+
+                
+                
                 self.view.layoutIfNeeded()
             })
         }
@@ -73,6 +86,30 @@ class ViewController: UIViewController {
     
  */
     }
+    
+    private func setUpView() {
+        let path = URL(fileURLWithPath: Bundle.main.path(forResource: "SpaceBackground1", ofType:"mp4")!)
+        
+        let player = AVPlayer.init(url: path)
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = view.layer.frame
+        
+        self.videoView.layer.addSublayer(playerLayer)
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        
+        player.play()
+        player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+        
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.videoDidPlayToEnd(_:)), name: NSNotification.Name(rawValue: "AVPlayerItemDidPlayToEndTimeNotification"), object: player.currentItem)
+    }
+    
+    @objc func videoDidPlayToEnd(_ notification: Notification) {
+        let player: AVPlayerItem = notification.object as! AVPlayerItem
+        player.seek(to: kCMTimeZero)
+    }
+    
     
 
 }
